@@ -1,0 +1,22 @@
+import { useState } from "react";
+import "./App.css";
+
+
+function App() {
+
+ const [val, setVal] = useState()
+  
+  return(
+    <div>
+
+       <input type='text' value={val} onChange={(event)=>setVal(event.target.value)} placeholder='Your Name' />
+       <h1>{val}</h1>
+       <button onClick={()=>setVal('')}>Clear value</button>
+       
+    </div>
+  )
+
+
+}
+
+export default App;
