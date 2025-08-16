@@ -1,0 +1,27 @@
+import { useState } from "react";
+import "./App.css";
+
+function App() {
+  const [val, setVal] = useState(""); // for input typing
+  const [submittedVal, setSubmittedVal] = useState(""); // for showing after submit
+
+  const handleSubmit = () => {
+    setSubmittedVal(val); // update only when button clicked
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        onChange={(event) => setVal(event.target.value)}
+        placeholder="Your Name"
+      />
+
+      <button onClick={handleSubmit}>Submit</button>
+
+      <h1>{submittedVal}</h1>
+    </div>
+  );
+}
+
+export default App;
